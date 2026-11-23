@@ -263,3 +263,20 @@ legend{font:600 13px var(--sans);color:#3E463E;margin-bottom:8px}
 .cuenta{background:#fff;border:1px solid #CFD8CF;border-radius:12px;padding:12px;display:flex;flex-direction:column;gap:8px}
 .cuenta-banco{margin:0;font-weight:700;font-size:14px;color:var(--verde)}
 .cuenta dl{margin:0;display:grid;gap:6px}
+
+/* Botón flotante de WhatsApp */
+.wsp-flotante{position:fixed;right:24px;bottom:24px;z-index:30;display:inline-flex;align-items:center;gap:10px;min-height:52px;padding:0 22px 0 18px;border-radius:999px;background:var(--tinta);color:#fff;text-decoration:none;font:700 16px var(--sans);box-shadow:0 10px 28px rgba(0,0,0,.25);transition:transform .15s,background .15s}
+.wsp-flotante:hover{background:#1F7A4D;color:#fff;transform:translateY(-2px)}
+.wsp-flotante svg{color:#25D366}
+.wsp-flotante:hover svg{color:#fff}
+@media (max-width:560px){.wsp-flotante{right:16px;bottom:16px;min-height:52px;width:52px;padding:0;justify-content:center}.wsp-flotante span{display:none}.wsp-flotante svg{width:26px;height:26px}}
+@media (prefers-reduced-motion:reduce){.wsp-flotante{transition:none}.wsp-flotante:hover{transform:none}}
+.aviso{bottom:92px}
+
+/* Botón flotante de Instagram (sobre el de WhatsApp) */
+.ig-flotante{position:fixed;right:24px;bottom:88px;z-index:30;width:52px;height:52px;border-radius:999px;display:inline-flex;align-items:center;justify-content:center;color:#fff;text-decoration:none;background:radial-gradient(circle at 30% 107%,#fdf497 0%,#fd5949 45%,#d6249f 60%,#285AEB 90%);box-shadow:0 10px 28px rgba(0,0,0,.25);transition:transform .15s}
+.ig-flotante:hover{transform:translateY(-2px);color:#fff}
+@media (max-width:560px){.ig-flotante{right:16px;bottom:80px}}
+@media (prefers-reduced-motion:reduce){.ig-flotante{transition:none}.ig-flotante:hover{transform:none}}
+.aviso{bottom:156px}
+@media (max-width:560px){.aviso{bottom:144px}}

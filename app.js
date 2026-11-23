@@ -66,6 +66,10 @@ function rellenarTienda() {
     else if (k in valores) e.textContent = valores[k];
   });
   $('#anio').textContent = new Date().getFullYear();
+  const wsp = $('#wsp-flotante');
+  const ig = $('#ig-flotante');
+  if (ig) { ig.href = 'https://www.instagram.com/' + TIENDA.instagram.replace(/^@/, '') + '/'; ig.title = 'Instagram ' + TIENDA.instagram; }
+  if (wsp) wsp.href = 'https://wa.me/' + TIENDA.whatsapp + '?text=' + encodeURIComponent('Hola Fructífero, tengo una consulta.');
 }
 
 // ---------- Botón "Agregar" con confirmación ----------
