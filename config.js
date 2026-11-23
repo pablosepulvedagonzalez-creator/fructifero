@@ -20,9 +20,9 @@ const TIENDA = {
   transferencia: {
     titular: 'Jorge Ignacio Rivero Bugueño',
     rut: '19.841.227-9',
-    banco: 'Banco Santander',
+    banco: 'Mercado Pago',
     tipo: 'Cuenta Vista',
-    numero: '007058084020',
+    numero: '1038651550',
     correo: 'jorge.rivero.bugue@gmail.com'
   },
   instagram: '@fructifero.exe',
