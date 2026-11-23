@@ -307,24 +307,29 @@ function mostrarPaso(paso) {
 }
 
 // ---------- Datos de transferencia ----------
-const T = TIENDA.transferencia;
-const textoBanco = T ? [
-  'Titular: ' + T.titular, 'RUT: ' + T.rut, 'Banco: ' + T.banco,
-  'Tipo de cuenta: ' + T.tipo, 'N° de cuenta: ' + T.numero, 'Correo: ' + T.correo
-].join('\n') : '';
+const CUENTAS = [].concat(TIENDA.transferencia || []);
+const T = CUENTAS.length > 0;
+const textoCuenta = (c) => [
+  'Titular: ' + c.titular, 'RUT: ' + c.rut, 'Banco: ' + c.banco,
+  'Tipo de cuenta: ' + c.tipo, 'N° de cuenta: ' + c.numero, 'Correo: ' + c.correo
+].join('\n');
 function pintarBanco() {
   if (!T) return;
-  $('#banco-lista').replaceChildren(...[
-    ['Titular', T.titular], ['RUT', T.rut], ['Banco', T.banco],
-    ['Tipo de cuenta', T.tipo], ['N° de cuenta', T.numero], ['Correo', T.correo]
-  ].map(([k, v]) => el('div', {}, el('dt', {}, k), el('dd', {}, v))));
+  $('#copiar-banco').hidden = true;
+  $('#banco-lista').replaceChildren(...CUENTAS.map((c) => {
+    const boton = el('button', { type: 'button', class: 'btn btn-borde btn-chico' }, 'Copiar datos ' + c.banco);
+    boton.addEventListener('click', async () => {
+      try { await navigator.clipboard.writeText(textoCuenta(c)); boton.textContent = 'Datos copiados'; }
+      catch { boton.textContent = 'Selecciona y copia los datos'; }
+      setTimeout(() => { boton.textContent = 'Copiar datos ' + c.banco; }, 2000);
+    });
+    return el('div', { class: 'cuenta' },
+      el('p', { class: 'cuenta-banco' }, c.banco + ' · ' + c.tipo),
+      el('dl', {}, [['Titular', c.titular], ['RUT', c.rut], ['N° de cuenta', c.numero], ['Correo', c.correo]]
+        .map(([k, v]) => el('div', {}, el('dt', {}, k), el('dd', {}, v)))),
+      boton);
+  }));
 }
-$('#copiar-banco').addEventListener('click', async (e) => {
-  const b = e.currentTarget;
-  try { await navigator.clipboard.writeText(textoBanco); b.textContent = 'Datos copiados'; }
-  catch { b.textContent = 'Selecciona y copia los datos'; }
-  setTimeout(() => { b.textContent = 'Copiar datos'; }, 2000);
-});
 
 function pintarEnvioCarrito() {
   const ls = lineas();

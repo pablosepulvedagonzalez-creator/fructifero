@@ -16,15 +16,26 @@ const TIENDA = {
   whatsapp: '56964493032',
   correo: 'jorge.rivero.bugue@gmail.com',
 
-  // Datos para pagos por transferencia (se muestran solo al elegir "Transferencia")
-  transferencia: {
-    titular: 'Jorge Ignacio Rivero Bugueño',
-    rut: '19.841.227-9',
-    banco: 'Mercado Pago',
-    tipo: 'Cuenta Vista',
-    numero: '1038651550',
-    correo: 'jorge.rivero.bugue@gmail.com'
-  },
+  // Cuentas para pagos por transferencia (se muestran solo al elegir "Transferencia").
+  // Puedes dejar una o varias: el cliente elige cuál usar.
+  transferencia: [
+    {
+      titular: 'Jorge Ignacio Rivero Bugueño',
+      rut: '19.841.227-9',
+      banco: 'Mercado Pago',
+      tipo: 'Cuenta Vista',
+      numero: '1038651550',
+      correo: 'jorge.rivero.bugue@gmail.com'
+    },
+    {
+      titular: 'Jorge Ignacio Rivero Bugueño',
+      rut: '19.841.227-9',
+      banco: 'Banco Santander',
+      tipo: 'Cuenta Vista',
+      numero: '007058084020',
+      correo: 'jorge.rivero.bugue@gmail.com'
+    }
+  ],
   instagram: '@fructifero.exe',
 
   zonaDespacho: 'la Región Metropolitana',

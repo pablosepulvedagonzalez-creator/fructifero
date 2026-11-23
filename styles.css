@@ -258,3 +258,8 @@ legend{font:600 13px var(--sans);color:#3E463E;margin-bottom:8px}
 
 .nota-envio{margin:0;padding:12px 14px;border-radius:12px;background:#F3EBDD;color:#3E463E;font-size:14px;line-height:1.5}
 .nota-envio:empty{display:none}
+
+.cuentas{display:grid;gap:12px}
+.cuenta{background:#fff;border:1px solid #CFD8CF;border-radius:12px;padding:12px;display:flex;flex-direction:column;gap:8px}
+.cuenta-banco{margin:0;font-weight:700;font-size:14px;color:var(--verde)}
+.cuenta dl{margin:0;display:grid;gap:6px}
