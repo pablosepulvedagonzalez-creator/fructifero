@@ -1,0 +1,8 @@
+{
+  "name": "fructifero-web",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Tienda online Fructífero con pago por Mercado Pago",
+  "engines": { "node": ">=18" }
+}

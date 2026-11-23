@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fructífero · Maní, frutos secos y dulces</title>
+<meta name="description" content="Maní confitado en más de 50 sabores, maní tostado, bañados en chocolate, frutos secos, semillas y gomitas. Formatos de 1 y 5 kg. Compra online.">
+<meta property="og:title" content="Fructífero · Frutos secos seleccionados">
+<meta property="og:description" content="Lo mejor de la tierra, directo a tu mesa. Compra online y recibe en tu casa.">
+<meta property="og:image" content="imagenes/nosotros.jpg">
+<link rel="icon" href="imagenes/logo.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="header">
+  <div class="wrap">
+    <a class="logo" href="#inicio"><img src="imagenes/logo.svg" alt="">Fructífero</a>
+    <nav class="nav" aria-label="Principal">
+      <a href="#productos">Productos</a>
+      <a href="#como-comprar">Cómo comprar</a>
+      <a href="#nosotros">Nosotros</a>
+      <a href="#preguntas">Preguntas</a>
+    </nav>
+    <button class="btn btn-primario" type="button" id="abrir-carrito" aria-label="Abrir carrito">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 4h2l2.4 11.2a2 2 0 0 0 2 1.6h7.7a2 2 0 0 0 2-1.5L21 8H6"/><circle cx="10" cy="20" r="1.4"/><circle cx="17" cy="20" r="1.4"/></svg>
+      Carrito <span class="contador" id="contador">0</span>
+    </button>
+  </div>
+</header>
+
+<main>
+<section id="inicio" class="wrap hero">
+  <div class="hero-texto">
+    <span class="chip">Maní · Frutos secos · Dulces</span>
+    <h1>Sabor para todos los gustos, directo a tu puerta.</h1>
+    <p class="lead">Maní confitado en más de 50 sabores, maní tostado, bañados en chocolate, frutos secos, semillas y gomitas. En formatos de 1 kg y 5 kg, para tu casa, tu evento o tu negocio.</p>
+    <div class="acciones">
+      <a class="btn btn-primario" href="#productos">Ver productos
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <a class="btn btn-borde" href="#como-comprar">Cómo funciona</a>
+    </div>
+    <div class="sellos">
+      <div class="sello"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#23402F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7h11v9H3zM14 10h4l3 3v3h-7z"/><circle cx="7" cy="18" r="1.6"/><circle cx="17" cy="18" r="1.6"/></svg>Despacho a todo Chile</div>
+      <div class="sello"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#23402F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M9 12l2 2 4-4"/></svg>Pago seguro con Mercado Pago</div>
+    </div>
+  </div>
+  <div class="hero-imagen hero-foto"><img src="imagenes/mani-confitado.jpg" alt="Maní confitado de distintos sabores y colores" width="602" height="451"></div>
+</section>
+
+<section class="beneficios" aria-label="Por qué Fructífero">
+  <div class="wrap">
+    <div class="beneficio">
+      <div class="beneficio-icono"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 19c0-8 6-14 15-14 0 9-6 15-14 15"/><path d="M5 19l7-7"/></svg></div>
+      <div><h3>Más de 50 sabores</h3><p>Maní confitado clásico y sabores únicos, de cookies &amp; cream a pisco sour.</p></div>
+    </div>
+    <div class="beneficio">
+      <div class="beneficio-icono"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 8l-9-5-9 5 9 5 9-5z"/><path d="M3 8v8l9 5 9-5V8"/><path d="M12 13v8"/></svg></div>
+      <div><h3>Formatos de 1 kg y 5 kg</h3><p>Para la casa, cumpleaños, eventos o para revender en tu negocio.</p></div>
+    </div>
+    <div class="beneficio">
+      <div class="beneficio-icono"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7h11v9H3zM14 10h4l3 3v3h-7z"/><circle cx="7" cy="18" r="1.6"/><circle cx="17" cy="18" r="1.6"/></svg></div>
+      <div><h3>Envío gratis sobre <span data-tienda="envioGratis"></span></h3><p>En <span data-tienda="zonaDespacho"></span>. Bajo ese monto y a regiones, envío por pagar o retiro gratis en <span data-tienda="retiro"></span>.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="productos" class="wrap seccion">
+  <div class="seccion-cabeza">
+    <div><p class="sobretitulo">Tienda</p><h2>Nuestros productos</h2></div>
+    <label class="buscador">
+      <span class="sr-only">Buscar productos</span>
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+      <input type="search" id="buscar" placeholder="Busca un producto o sabor" autocomplete="off">
+    </label>
+  </div>
+  <nav class="cat-nav" id="cat-nav" aria-label="Categorías"></nav>
+  <div id="catalogo"></div>
+  <p class="sin-resultados" id="sin-resultados" hidden>No encontramos productos con ese nombre. Prueba con otra palabra o <a data-tienda="whatsappLink" target="_blank" rel="noopener">escríbenos por WhatsApp</a>.</p>
+</section>
+
+<section id="como-comprar" class="wrap" style="padding-top:72px;padding-bottom:72px">
+  <div class="pasos">
+    <h2>Comprar es simple</h2>
+    <div class="pasos-grilla">
+      <div class="paso"><span>01</span><h3>Elige tus productos</h3><p>Selecciona el formato de cada fruto seco y agrégalo al carrito.</p></div>
+      <div class="paso"><span>02</span><h3>Completa tus datos</h3><p>Indica tu dirección y paga con tarjeta en Mercado Pago, o por transferencia.</p></div>
+      <div class="paso"><span>03</span><h3>Recibe en tu casa</h3><p>Te confirmamos el pedido y coordinamos la entrega contigo.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="nosotros" class="wrap nosotros">
+  <div class="nosotros-img nosotros-foto"><img src="imagenes/nosotros.jpg" alt="Maní confitado, mix de frutos secos, maní bañado en chocolate, almendras, gomitas y pistachos" width="976" height="648"></div>
+  <div class="nosotros-texto">
+    <p class="sobretitulo">Nosotros</p>
+    <h2>Todo lo que te gusta picar, en un solo lugar</h2>
+    <p class="cuerpo">En Fructífero reunimos maní, frutos secos, chocolates y dulces en formatos convenientes, para que abastecer tu casa, tu evento o tu negocio sea fácil y a un clic de distancia. [CUENTA AQUÍ LA HISTORIA DE TU MARCA: quiénes son, de dónde vienen sus productos y qué los hace distintos.]</p>
+  </div>
+</section>
+
+<section id="preguntas" class="faq">
+  <h2>Preguntas frecuentes</h2>
+  <details><summary>¿A dónde despachan y cuánto demora?<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#23402F" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary>
+    <p>Despachamos a todo Chile y entregamos en <span data-tienda="plazoEntrega"></span>. En la Región Metropolitana el envío es gratis en compras sobre <span data-tienda="envioGratis"></span>. Bajo ese monto, y para envíos a regiones, el envío es por pagar (lo pagas al recibir). También puedes retirar gratis en <span data-tienda="retiro"></span>.</p></details>
+  <details><summary>¿Cómo conservo mis frutos secos?<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#23402F" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary>
+    <p>Guárdalos en un frasco hermético, en un lugar fresco, seco y sin luz directa. Los productos bañados en chocolate se conservan mejor lejos del calor.</p></details>
+  <details><summary>¿Qué medios de pago aceptan?<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#23402F" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary>
+    <p>Puedes pagar con tarjeta de débito o crédito a través de Mercado Pago, o por transferencia bancaria. Eliges el medio al finalizar tu compra.</p></details>
+  <details><summary>¿Venden por mayor o para eventos?<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#23402F" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary>
+    <p>Sí. Nuestro formato de 5 kg es ideal para eventos y negocios. Para pedidos más grandes escríbenos a <a data-tienda="correoLink"></a> y te enviamos una cotización.</p></details>
+</section>
+</main>
+
+<footer class="footer">
+  <div class="wrap footer-cols">
+    <div class="footer-col" style="flex-basis:280px"><span class="footer-marca">Fructífero</span><p style="margin:0;line-height:1.6;max-width:320px">Maní, frutos secos y dulces, directo a tu puerta.</p></div>
+    <div class="footer-col"><h3>Contacto</h3>
+      <a data-tienda="whatsappLink" target="_blank" rel="noopener">WhatsApp</a>
+      <a data-tienda="correoLink"></a>
+      <a data-tienda="instagramLink" target="_blank" rel="noopener"></a></div>
+    <div class="footer-col"><h3>Tienda</h3><a href="#productos">Productos</a><a href="#como-comprar">Cómo comprar</a><a href="#preguntas">Preguntas frecuentes</a></div>
+  </div>
+  <div class="wrap footer-legal">© <span id="anio"></span> Fructífero. Todos los derechos reservados.</div>
+</footer>
+
+<div class="aviso" id="aviso" role="status" hidden><span id="aviso-texto"></span><button type="button" id="aviso-ver">Ver carrito</button></div>
+
+<div class="carrito" id="carrito" hidden>
+  <button class="carrito-fondo" type="button" aria-label="Cerrar carrito" data-cerrar></button>
+  <aside class="carrito-panel" role="dialog" aria-modal="true" aria-labelledby="carrito-titulo">
+    <div class="carrito-cabeza">
+      <h2 id="carrito-titulo">Tu carrito</h2>
+      <button class="redondo grande" type="button" aria-label="Cerrar" data-cerrar><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+    </div>
+
+    <div class="carrito-cuerpo">
+      <div id="paso-carrito">
+        <div class="vacio" id="vacio"><p style="margin:0 0 18px;font-size:17px">Tu carrito está vacío.</p><button class="btn btn-primario" type="button" data-cerrar>Ver productos</button></div>
+        <div id="lineas"></div>
+      </div>
+
+      <form class="form" id="paso-datos" hidden novalidate>
+        <label class="campo">Nombre y apellido<input name="nombre" autocomplete="name" required maxlength="80"></label>
+        <label class="campo">Correo electrónico<input name="correo" type="email" autocomplete="email" required maxlength="120"></label>
+        <label class="campo">Teléfono<input name="telefono" type="tel" autocomplete="tel" required maxlength="30"></label>
+        <fieldset>
+          <legend>¿Cómo quieres recibir tu pedido?</legend>
+          <div class="pagos">
+            <label class="pago"><input type="radio" name="entrega" value="despacho" checked>Despacho a domicilio<small>Entrega en <span data-tienda="plazoEntrega"></span></small></label>
+            <label class="pago"><input type="radio" name="entrega" value="retiro">Retiro en <span data-tienda="retiro"></span><small>Gratis, coordinamos por WhatsApp</small></label>
+          </div>
+        </fieldset>
+        <div id="campos-despacho" class="form">
+          <fieldset>
+            <legend>Zona de despacho</legend>
+            <div class="pagos">
+              <label class="pago"><input type="radio" name="zona" value="rm" checked>Región Metropolitana<small>Gratis sobre <span data-tienda="envioGratis"></span></small></label>
+              <label class="pago"><input type="radio" name="zona" value="region">Otra región<small>Envío por pagar al recibir</small></label>
+            </div>
+          </fieldset>
+          <label class="campo">Dirección de despacho<input name="direccion" autocomplete="street-address" maxlength="160"></label>
+          <label class="campo"><span id="etq-comuna">Comuna</span><input name="comuna" maxlength="60"></label>
+        </div>
+        <p class="nota-envio" id="nota-envio"></p>
+        <fieldset>
+          <legend>Medio de pago</legend>
+          <div class="pagos">
+            <label class="pago"><input type="radio" name="pago" value="tarjeta" checked>Tarjeta<small>Débito o crédito, vía Mercado Pago</small></label>
+            <label class="pago"><input type="radio" name="pago" value="transferencia">Transferencia<small>Confirmas tu pedido por WhatsApp</small></label>
+          </div>
+        </fieldset>
+        <div class="banco" id="datos-banco" hidden>
+          <p class="banco-titulo">Datos para la transferencia</p>
+          <dl id="banco-lista"></dl>
+          <button type="button" class="btn btn-borde btn-chico" id="copiar-banco">Copiar datos</button>
+          <p class="banco-nota">Al confirmar se abrirá WhatsApp con tu pedido. Envía ahí el comprobante de la transferencia.</p>
+        </div>
+        <p class="error" id="error" role="alert" hidden></p>
+      </form>
+    </div>
+
+    <div class="carrito-pie" id="pie" hidden>
+      <div class="progreso" id="progreso">Te faltan <strong id="faltan"></strong> para el envío gratis<div class="barra"><div id="barra"></div></div></div>
+      <div class="fila-total"><span>Subtotal</span><span id="subtotal"></span></div>
+      <div class="fila-total"><span>Envío</span><span id="envio"></span></div>
+      <div class="fila-total grande"><span>Total</span><span id="total"></span></div>
+      <button class="btn btn-primario btn-bloque" type="button" id="continuar">Continuar con la compra</button>
+      <button class="btn btn-primario btn-bloque" type="submit" form="paso-datos" id="confirmar" hidden>Pagar</button>
+      <button class="link-btn" type="button" id="volver" hidden>Volver al carrito</button>
+    </div>
+  </aside>
+</div>
+
+<script src="config.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

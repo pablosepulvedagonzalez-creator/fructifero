@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Tu pedido · Fructífero</title>
+<link rel="icon" href="imagenes/logo.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="header"><div class="wrap"><a class="logo" href="index.html"><img src="imagenes/logo.svg" alt="">Fructífero</a></div></header>
+<main class="gracias">
+  <div class="gracias-caja">
+    <div class="gracias-icono" id="icono"></div>
+    <h1 id="titulo" style="font-size:clamp(34px,5vw,48px)"></h1>
+    <p id="mensaje"></p>
+    <p id="numero" style="font-weight:700;color:#1E2A22"></p>
+    <div class="banco" id="datos-banco" hidden style="text-align:left;width:100%">
+      <p class="banco-titulo">Datos para la transferencia</p>
+      <dl id="banco-lista"></dl>
+    </div>
+    <a class="btn btn-primario" href="index.html" id="accion">Volver a la tienda</a>
+  </div>
+</main>
+<script src="config.js"></script>
+<script>
+(function () {
+const { TIENDA } = FRUCTIFERO;
+const q = new URLSearchParams(location.search);
+const estado = q.get('estado');
+const pedido = (q.get('pedido') || '').replace(/[^A-Z0-9-]/gi, '').slice(0, 30);
+
+const ok = '<svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>';
+const reloj = '<svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#1E2A22" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>';
+const cruz = '<svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>';
+
+const textos = {
+  aprobado:      { icono: ok,    fondo: '#23402F', titulo: '¡Gracias por tu compra!', mensaje: 'Tu pago fue aprobado. Te escribiremos por WhatsApp o correo para coordinar la entrega.', limpiar: true },
+  pendiente:     { icono: reloj, fondo: '#E3A25A', titulo: 'Tu pago está en proceso', mensaje: 'Mercado Pago está confirmando tu pago. Te avisaremos por correo cuando se apruebe.', limpiar: true },
+  rechazado:     { icono: cruz,  fondo: '#9A3412', titulo: 'El pago no se completó', mensaje: 'No se realizó ningún cobro. Tu carrito sigue guardado: puedes intentarlo de nuevo o elegir transferencia.', limpiar: false, accion: 'Volver al carrito' },
+  transferencia: { icono: ok,    fondo: '#23402F', titulo: '¡Pedido enviado!', mensaje: 'Te abrimos WhatsApp con el detalle de tu pedido. Haz la transferencia con estos datos y envía el comprobante por el mismo chat.', limpiar: true }
+};
+const t = textos[estado] || { icono: ok, fondo: '#23402F', titulo: 'Gracias por visitarnos', mensaje: '', limpiar: false };
+
+document.getElementById('icono').innerHTML = t.icono;
+document.getElementById('icono').style.background = t.fondo;
+document.getElementById('titulo').textContent = t.titulo;
+document.getElementById('mensaje').textContent = t.mensaje;
+document.getElementById('numero').textContent = pedido ? 'Número de pedido: ' + pedido : '';
+if (t.accion) document.getElementById('accion').textContent = t.accion;
+if (estado === 'transferencia' && TIENDA.transferencia) {
+  const T = TIENDA.transferencia, dl = document.getElementById('banco-lista');
+  [['Titular', T.titular], ['RUT', T.rut], ['Banco', T.banco], ['Tipo de cuenta', T.tipo], ['N° de cuenta', T.numero], ['Correo', T.correo]]
+    .forEach(([k, v]) => { const d = document.createElement('div'); const dt = document.createElement('dt'); const dd = document.createElement('dd'); dt.textContent = k; dd.textContent = v; d.append(dt, dd); dl.append(d); });
+  document.getElementById('datos-banco').hidden = false;
+}
+if (t.limpiar) { try { localStorage.removeItem('fructifero-carrito'); } catch {} }
+document.title = t.titulo + ' · ' + TIENDA.nombre;
+})();
+</script>
+</body>
+</html>
