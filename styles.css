@@ -30,7 +30,9 @@ a{color:var(--verde)}
 .header{position:sticky;top:0;z-index:20;background:rgba(247,242,232,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--borde)}
 .header .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;padding-top:14px;padding-bottom:14px}
 .logo{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--tinta);font-family:var(--serif);font-size:26px}
-.logo img{width:34px;height:34px}
+.logo img{width:auto;height:68px;display:block}
+@media (max-width:560px){.logo img{height:56px}}
+.footer-logo{width:240px;height:auto;display:block}
 .nav{display:flex;gap:22px;flex-wrap:wrap}
 .nav a{color:var(--tinta);text-decoration:none;font-weight:600;font-size:15px;padding:10px 4px}
 .nav a:hover{text-decoration:underline;text-underline-offset:4px}

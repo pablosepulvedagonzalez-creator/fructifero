@@ -36,7 +36,7 @@ const TIENDA = {
       correo: 'jorge.rivero.bugue@gmail.com'
     }
   ],
-  instagram: '@fructifero.exe',
+  instagram: '@fructifero.cl',
 
   zonaDespacho: 'la Región Metropolitana',
   plazoEntrega: '2 días hábiles',
@@ -114,13 +114,13 @@ const PRODUCTOS = [
     ], 7500, 20000)
   },
   {
-    id: 'mani-japones', categoria: 'tostados', tipo: 'tarjeta', consultar: true,
+    id: 'mani-japones', categoria: 'tostados', tipo: 'tarjeta', etiqueta: '8 sabores',
     nombre: 'Maní japonés', imagen: '', variante: 'Sabor',
-    descripcion: 'Crujiente maní japonés marca Crokissimo y saborizados Deleite. Precio por confirmar: consúltanos por WhatsApp.',
+    descripcion: 'Crujiente maní japonés con sabores: salado, pimentón, ciboulette, merkén, jamón serrano, habanero, queso y barbecue.',
     variantes: [
       'Salado (Crokissimo)', 'Pimentón (Crokissimo)', 'Ciboulette (Crokissimo)', 'Merkén (Deleite)',
       'Jamón serrano (Deleite)', 'Habanero', 'Queso', 'Barbecue'
-    ].map((nombre) => ({ nombre, precios: {}, imagen: foto('mani-japones-' + slug(nombre)) }))
+    ].map((nombre) => ({ nombre, precios: kg(10000, 38000), imagen: foto('mani-japones-' + slug(nombre)) }))
   },
   { id: 'mani-con-vaina', categoria: 'tostados', tipo: 'lista', nombre: 'Maní con vaina (con cáscara)', variantes: [{ nombre: 'Maní con vaina (con cáscara)', precios: kg(9500) }] },
 
