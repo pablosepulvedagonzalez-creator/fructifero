@@ -305,7 +305,7 @@ function mostrarPaso(paso) {
   $('#continuar').hidden = datos;
   $('#confirmar').hidden = !datos;
   $('#volver').hidden = !datos;
-  $('#carrito-titulo').textContent = datos ? 'Datos de entrega' : 'Tu carrito';
+  $('#carrito-titulo').textContent = datos ? 'Finalizar compra' : 'Tu carrito';
   if (datos) actualizarEntrega(); else pintarEnvioCarrito();
   $('#error').hidden = true;
 }

@@ -150,6 +150,20 @@
       </div>
 
       <form class="form" id="paso-datos" hidden novalidate>
+        <fieldset>
+          <legend>¿Cómo quieres pagar?</legend>
+          <div class="pagos">
+            <label class="pago"><input type="radio" name="pago" value="credito" checked>Tarjeta de crédito<small>Paga en cuotas, vía Mercado Pago</small></label>
+            <label class="pago"><input type="radio" name="pago" value="debito">Tarjeta de débito<small>Vía Mercado Pago</small></label>
+            <label class="pago"><input type="radio" name="pago" value="transferencia">Transferencia<small>Confirmas tu pedido por WhatsApp</small></label>
+          </div>
+        </fieldset>
+        <div class="banco" id="datos-banco" hidden>
+          <p class="banco-titulo">Datos para la transferencia (elige una cuenta)</p>
+          <div id="banco-lista" class="cuentas"></div>
+          <button type="button" class="btn btn-borde btn-chico" id="copiar-banco">Copiar datos</button>
+          <p class="banco-nota">Al confirmar se abrirá WhatsApp con tu pedido. Envía ahí el comprobante de la transferencia.</p>
+        </div>
         <label class="campo">Nombre y apellido<input name="nombre" autocomplete="name" required maxlength="80"></label>
         <label class="campo">Correo electrónico<input name="correo" type="email" autocomplete="email" required maxlength="120"></label>
         <label class="campo">Teléfono<input name="telefono" type="tel" autocomplete="tel" required maxlength="30"></label>
@@ -172,20 +186,6 @@
           <label class="campo"><span id="etq-comuna">Comuna</span><input name="comuna" maxlength="60"></label>
         </div>
         <p class="nota-envio" id="nota-envio"></p>
-        <fieldset>
-          <legend>Medio de pago</legend>
-          <div class="pagos">
-            <label class="pago"><input type="radio" name="pago" value="credito" checked>Tarjeta de crédito<small>Paga en cuotas, vía Mercado Pago</small></label>
-            <label class="pago"><input type="radio" name="pago" value="debito">Tarjeta de débito<small>Vía Mercado Pago</small></label>
-            <label class="pago"><input type="radio" name="pago" value="transferencia">Transferencia<small>Confirmas tu pedido por WhatsApp</small></label>
-          </div>
-        </fieldset>
-        <div class="banco" id="datos-banco" hidden>
-          <p class="banco-titulo">Datos para la transferencia (elige una cuenta)</p>
-          <div id="banco-lista" class="cuentas"></div>
-          <button type="button" class="btn btn-borde btn-chico" id="copiar-banco">Copiar datos</button>
-          <p class="banco-nota">Al confirmar se abrirá WhatsApp con tu pedido. Envía ahí el comprobante de la transferencia.</p>
-        </div>
         <p class="error" id="error" role="alert" hidden></p>
       </form>
     </div>
