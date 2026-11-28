@@ -74,6 +74,11 @@ export default async function handler(req, res) {
       failure: sitio + '/gracias.html?estado=rechazado&pedido=' + pedidoId
     },
     auto_return: 'approved',
+    // Crédito: solo tarjetas de crédito (con las cuotas que ofrezca Mercado Pago).
+    // Débito: solo débito y prepago, en 1 pago.
+    payment_methods: body.cliente && body.cliente.pago === 'debito'
+      ? { excluded_payment_types: [{ id: 'credit_card' }], installments: 1 }
+      : { excluded_payment_types: [{ id: 'debit_card' }, { id: 'prepaid_card' }] },
     metadata: {
       pedido: pedidoId,
       telefono: cliente.telefono,

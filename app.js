@@ -369,7 +369,8 @@ function actualizarBotonPago() {
   const medio = new FormData($('#paso-datos')).get('pago');
   $('#datos-banco').hidden = !(medio === 'transferencia' && T);
   const total = pedido ? ' · ' + dinero(pedido.total) : '';
-  $('#confirmar').textContent = (medio === 'transferencia' ? 'Enviar pedido por WhatsApp' : 'Pagar con Mercado Pago') + total;
+  const etiquetas = { transferencia: 'Enviar pedido por WhatsApp', debito: 'Pagar con débito', credito: 'Pagar con crédito' };
+  $('#confirmar').textContent = (etiquetas[medio] || 'Pagar con Mercado Pago') + total;
 }
 
 let ultimoFoco;
